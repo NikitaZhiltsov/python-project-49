@@ -37,7 +37,8 @@ import prompt
 import random
 from random import randint
 import math
-from brain_game import main
+from brain_games.cli import welcome_user
+
 
 #создание функции проверка на четность
 def is_eval(num):
@@ -46,7 +47,12 @@ def is_eval(num):
     else:
         return 'no'
 
-main()
+print("Welcome to the Brain Games!")
+def welcome_user(str):
+    name = prompt.string('May I have your name? ')
+    print('Hello, ' + name + '!')
+    
+welcome_user(str)
 
 def solution():
     print('Answer "yes" if the number is even, otherwise answer "no".')
@@ -62,10 +68,10 @@ def solution():
         else:
             if answer == 'no':
                 print("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ")
-                break
+                return 
             else:
                 print("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ")
-                break
+                return
     print('Congratulations')
 
 
