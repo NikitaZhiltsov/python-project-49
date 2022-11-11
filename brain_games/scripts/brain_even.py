@@ -36,7 +36,7 @@ from random import randint
 import math
 
 
-def solution():
+def main():
     #блок приветствия и условия задачи
     print("Welcome to the Brain Games!")
     name = prompt.string('May I have your name? ')
@@ -72,9 +72,7 @@ def solution():
                 else:
                     print("\'" + answer + "\'" + " is wrong answer ;(. Correct answer was 'no'.\nLet's try again, " + name)
                     return
-                
+                break 
+            
     print('Congratulations, ' + name + '!')
-
-
-solution()
 
